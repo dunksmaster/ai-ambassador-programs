@@ -8,6 +8,16 @@ This is not a link dump and not an application bot. It does not apply to anythin
 
 Kept by **Dorian Kane** (`dunksmaster`), Hungary. Student-only programs are marked **Gated** and hidden by default.
 
+## GitHub Pages
+
+The site files already live in `docs/` on `main`. GitHub’s Pages create API returns 403 for the automation token on this repo, so the owner has to flip the switch once:
+
+1. Open [Settings → Pages](https://github.com/dunksmaster/ai-ambassador-programs/settings/pages)
+2. **Build and deployment → Source:** Deploy from a branch
+3. **Branch:** `main` · **folder:** `/docs` → Save
+
+After that, `https://dunksmaster.github.io/ai-ambassador-programs/` serves this ledger. The optional Actions workflow in `.github/workflows/pages.yml` can publish the same folder if you later switch the source to GitHub Actions.
+
 ## How status is updated
 
 `docs/programs.json` is the source of truth. The page reads that file; it does not scrape forms at runtime.
