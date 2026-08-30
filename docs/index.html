@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Ambassador Ledger — AI &amp; developer programs</title>
+  <meta name="description" content="A paper-and-ink tracker of ambassador programs: what each product is, what ambassadors actually do, and apply status as of 31 August 2026. Kept by Kane in Hungary.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,560;0,9..144,680;1,9..144,400;1,9..144,560&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip" href="#ledger">Skip to programs</a>
+
+  <header class="masthead">
+    <div class="masthead-top">
+      <p class="folio">Vol. I · No. 1</p>
+      <p class="place">Budapest · Hungary</p>
+      <p class="as-of" id="as-of">As of 31 Aug 2026</p>
+    </div>
+    <div class="masthead-rule" aria-hidden="true"></div>
+    <h1>The Ambassador Ledger</h1>
+    <p class="deck">What each program is <em>about</em>, and what ambassadors actually <em>do</em> — not a link dump.</p>
+    <div class="masthead-rule thick" aria-hidden="true"></div>
+    <div class="byline-row">
+      <p>Kept by <strong>Dorian Kane</strong> (<span class="mono">dunksmaster</span>), also Kane. A working index for someone who is not a student applicant and does not want to guess from a landing-page slogan.</p>
+      <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">Ink</button>
+    </div>
+  </header>
+
+  <section class="preface" aria-labelledby="preface-title">
+    <div class="preface-col">
+      <h2 id="preface-title">How to read this</h2>
+      <p>Every entry names the product, then the work: events, content, feedback, campus clubs, paid writing. Status pills are current as of <strong>31 August 2026</strong>. <span class="stamp-inline gated">Gated</span> marks student-only or audience-threshold programs. Student-only rows are hidden unless you turn them on — this ledger defaults to seats Kane can actually take.</p>
+    </div>
+    <div class="preface-col">
+      <h2>What this is not</h2>
+      <p>It is not an application service and not a perk catalog invented after the fact. Closed and paused programs stay on the page so the record does not pretend they vanished. When a shorter card could not be independently dated, the stamp is <span class="stamp-inline see-site">See site</span> — open the official URL before you spend an evening on a form.</p>
+    </div>
+  </section>
+
+  <div class="ledger-bar" id="filters">
+    <div class="ledger-bar-inner">
+      <div class="progress-wrap">
+        <p class="progress-label"><span class="mono" id="progress-text">Loading ledger…</span></p>
+        <div class="progress-track" aria-hidden="true"><div class="progress-fill" id="progress-fill"></div></div>
+      </div>
+      <label class="search-field">
+        <span class="mono">Find</span>
+        <input type="search" id="search" placeholder="Name, product, city host, credits…" autocomplete="off">
+      </label>
+      <fieldset class="filter-set">
+        <legend class="mono">Status</legend>
+        <div class="chip-row" id="status-filters"></div>
+      </fieldset>
+      <fieldset class="filter-set">
+        <legend class="mono">Kind</legend>
+        <div class="chip-row" id="category-filters"></div>
+      </fieldset>
+      <label class="toggle">
+        <input type="checkbox" id="student-toggle">
+        <span>Show student-only</span>
+      </label>
+    </div>
+  </div>
+
+  <main id="ledger">
+    <section class="section-head" id="featured-head">
+      <p class="section-kicker mono">I · Noted at length</p>
+      <h2>AI programs and extras</h2>
+      <p>Fuller notes: eligibility, what the work looks like week to week, and the official apply path.</p>
+    </section>
+    <div id="featured-list" class="entry-list"></div>
+
+    <section class="section-head" id="index-head">
+      <p class="section-kicker mono">II · The wider index</p>
+      <h2>Developer programs from the public lists</h2>
+      <p>Shorter cards for the rest of the <a href="https://github.com/geshan/developer-ambassador-programs">geshan/developer-ambassador-programs</a> set, plus official one-liners. Deadlines are not invented.</p>
+    </section>
+    <div id="index-list" class="entry-list compact"></div>
+
+    <p class="empty mono" id="empty" hidden>No programs match these marks. Clear a filter or show student-only.</p>
+  </main>
+
+  <footer class="colophon">
+    <p>Source of truth: <a href="programs.json"><span class="mono">programs.json</span></a>. Site: <a href="https://dunksmaster.github.io/ai-ambassador-programs/">dunksmaster.github.io/ai-ambassador-programs</a>. Repo: <a href="https://github.com/dunksmaster/ai-ambassador-programs">github.com/dunksmaster/ai-ambassador-programs</a>.</p>
+    <p>Statuses age. If a form moved, edit the JSON and the page follows. This page does not apply to anything on your behalf.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
