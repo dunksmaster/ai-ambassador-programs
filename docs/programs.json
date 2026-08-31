@@ -36,13 +36,15 @@
       "eligibility": "Student leaders, community organizers, and technical creators. Non-technical applicants are welcome. One-year cohort; can reapply for a second year. Not a paid role.",
       "perks": "Meetup and workshop support; credits, marketing assets, and technical resources; access to Cloudflare expertise at events; recognition and exclusive swag. Ambassadors are not paid.",
       "status": "open",
-      "statusNote": "2026–27 cohort. Apply by 6 Sep 2026. Selected ambassadors notified by 5 Oct 2026.",
+      "statusNote": "Applied 31 Aug 2026. Window still open until 6 Sep; selected ambassadors notified by 5 Oct 2026.",
       "deadline": "2026-09-06",
       "category": "dev-tool",
       "studentOnly": false,
       "featured": true,
       "url": "https://www.cloudflare.com/community/",
-      "applyUrl": "https://www.cloudflare.com/community/"
+      "applyUrl": "https://www.cloudflare.com/community/",
+      "applied": true,
+      "appliedOn": "2026-08-31"
     },
     {
       "id": "claude-community",
