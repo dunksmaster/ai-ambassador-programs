@@ -18,6 +18,18 @@ The site files already live in `docs/` on `main`. GitHub’s Pages create API re
 
 After that, `https://dunksmaster.github.io/ai-ambassador-programs/` serves this ledger. The optional Actions workflow in `.github/workflows/pages.yml` can publish the same folder if you later switch the source to GitHub Actions.
 
+## Discovery sources
+
+Where new openings are found for the weekday morning scan:
+
+1. Web search (apply announcements, brand reopenings)
+2. Official program pages on a closed/paused watchlist
+3. Baseline lists (geshan/developer-ambassador-programs + known extras)
+4. **X.com** posts announcing ambassador / champion / partner / creator programs with apply links (Google Forms, Typeform, Ashby, Notion)
+5. Manual pastes from Dorian
+
+Crypto/KOL/trading referral programs found on X are briefed first; AI/dev-tool programs may be auto-applied when they fit.
+
 ## How status is updated
 
 `docs/programs.json` is the source of truth. The page reads that file; it does not scrape forms at runtime.
